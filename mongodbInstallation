@@ -1,0 +1,18 @@
+Mongo db setup Procedure
+=============================
+
+1) brew tap mongodb/brew
+
+2) brew install mongodb-community@4.2
+
+3) mongod --config /usr/local/etc/mongod.conf --fork
+
+4) go to mongo shell and create some user using below steps
+
+ A) mongo
+ B) db.createUser({user:"eshwar", pwd:passwordPrompt(), roles:[{role:"userAdminAnyDatabase", db:"admin"}, "readWriteAnyDatabase"]})
+
+5) Download the mongoDB compass in below link.( download 1.20.3 (Community edition Stable))
+
+6) move the downloaded mongoCompass to Application Folder.
+7) connect to db using the username/password option and give username/password just created
